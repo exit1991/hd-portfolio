@@ -1,0 +1,29 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "[01] Next.js: サーバーサイド起動",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev"
+    },
+    {
+      "name": "[02] Next.js: クライアントサイド起動",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000"
+    },
+    {
+      "name": "[03] Next.js: サーバー＋クライアント起動",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev",
+      "serverReadyAction": {
+        "pattern": "- Local:.+ (https?://.+)",
+        "uriFormat": "%s",
+        "action": "debugWithChrome",
+        "killOnServerStop": true
+      }
+    }
+  ]
+}
