@@ -1,1 +1,6 @@
-node_modules
+package.json
+package-lock.json
+
+# 現在のディレクトリとそのサブディレクトリに存在する全ての対象を無視
+**/.git
+**/node_modules
