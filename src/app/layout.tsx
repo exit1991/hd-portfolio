@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import * as GoogleFonts from "./styles/fonts";
+import * as GoogleFonts from "../styles/ts/fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
