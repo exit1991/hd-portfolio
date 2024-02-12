@@ -35,7 +35,7 @@ body {
 }
 
 body {
-  font-family: "Poiret One", sans-serif;
+  font-family: var(--font-poiret-one), sans-serif;
   background-color: rgba(45, 64, 89, 1);
   color: white;
 }
