@@ -1,0 +1,9 @@
+@use "../global" as g;
+
+.p-hero {
+    width: 100%;
+    height: 240vh;
+    position: relative;
+    z-index: g.$zindex-hero;
+    margin: 0 0 100vh;
+}

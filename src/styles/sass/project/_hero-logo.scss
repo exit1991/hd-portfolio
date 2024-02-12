@@ -1,0 +1,24 @@
+@use "../global" as g;
+
+.p-hero-logo {
+    width: fit-content;
+    height: fit-content;
+    position: sticky;
+    top: 45vh;
+    left: 42vw;
+    text-align: center;
+    z-index: g.$zindex-hero-logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+// .p-hero-logo__icon {
+
+// }
+
+.p-hero-logo__txt {
+    font-weight: 400;
+    font-size: 10rem;
+}

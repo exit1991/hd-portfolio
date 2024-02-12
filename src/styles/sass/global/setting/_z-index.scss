@@ -8,35 +8,14 @@
 //          absolute  … 効く
 //          fixed     … 効く
 //          sticky    … 効く
+//   指定方法
+//      @use "../global" as g;
+//      z-index: g.$zindex-〜;
 // ----------------
 
-// $zindex-buildings: 100;
-// $zindex-hills: 200;
-// $zindex-copyright: 500;
-// $zindex-menu: 600;
-// $zindex-setup: 600;
+$zindex-bg-canvas: -200;
 
-// $zindex-setup-progress-tracker__bar: 700;
-// $zindex-setup-progress-tracker__circle: 800;
+$zindex-manu-item__link: -1;
 
-// // $zindex-setup-board-menu: auto;
-// $zindex-setup-board-menu: 600;
-// $zindex-setup-board-menu-item: auto;
-
-// $zindex-setup-player-container: auto;
-// $zindex-setup-player-panel: auto;
-
-// $zindex-setup-playericon-container: auto;
-// $zindex-setup-playericon-panel: auto;
-
-// $zindex-setup-confirmation-container: auto;
-
-// $zindex-control-buttons-container: 600;
-// $zindex-control-button: auto;
-
-// $zindex-control-next-icon: 100;
-// $zindex-control-next-panel: 0;
-
-// $zindex-playing-stanby-playercard-storeimage: 300;
-// $zindex-playing-stanby-playercard-info-containeres: 400;
-// $zindex-playing-stanby-playercard-mask: 500;
+$zindex-hero: -100;
+$zindex-hero-logo: 100;

@@ -1,11 +1,6 @@
-"use client";
-import * as THREE from "three";
-import Image from "next/image";
-// import styles from "./page.module.css";
-import { useEffect } from "react";
-
-import "ress";
-import "./style.scss";
+'use client';
+import * as THREE from 'three';
+import { useEffect } from 'react';
 
 export default function Home() {
   useEffect(() => {
@@ -14,21 +9,25 @@ export default function Home() {
 
   return (
     <>
-      <canvas id="myCanvas" />
-      <main>
-        <div className="wrap">
-          <nav className="nav-list">
-            <ul>
-              <li className="nav-list-text">
-                <a href="/">about</a>
-              </li>
-              <li className="nav-list-text">
-                <a href="/">works</a>
-              </li>
-            </ul>
-          </nav>
-          <div className="logo-wrap">
-            <div className="logo">
+      <canvas className="js-webgl p-bg-canvas"></canvas>
+      <main className="l-main">
+        <nav className="p-main-manu">
+          <ul>
+            <li className="c-manu-item">
+              <a className="c-manu-item__link" href="/">
+                about
+              </a>
+            </li>
+            <li className="c-manu-item">
+              <a className="c-manu-item__link" href="/">
+                works
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div className="p-hero">
+          <div className="p-hero-logo">
+            <div className="p-hero-logo__icon">
               <svg
                 width={131}
                 height={130}
@@ -59,25 +58,22 @@ export default function Home() {
                   fill="#EE806A"
                 />
               </svg>
-              <h1>hdeg</h1>
             </div>
+            <h1 className="p-hero-logo__txt">hdeg</h1>
           </div>
-          <section className="about">
-            <h1 className="about__title">about</h1>
-            <div className="about__desc">
-              <p>h deg</p>
-            </div>
-          </section>
-          <section className="works">
-            <h1 className="works__title">works</h1>
-            <div className="works__desc">
-              <p>h deg</p>
-            </div>
-          </section>
         </div>
-        <div className="scroll-dummy">
-          <p>page end</p>
-        </div>
+        <section className="p-portfolio-content">
+          <h1 className="p-portfolio-content__ttl">about</h1>
+          <div className="p-portfolio-content__desc--about">
+            <p>h deg</p>
+          </div>
+        </section>
+        <section className="p-portfolio-content">
+          <h1 className="p-portfolio-content__ttl">works</h1>
+          <div className="p-portfolio-content__desc--works">
+            <p>h deg</p>
+          </div>
+        </section>
       </main>
     </>
   );
@@ -93,7 +89,7 @@ function main() {
   // レンダラーを作成
   const renderer = new THREE.WebGLRenderer({
     alpha: true,
-    canvas: document.querySelector("#myCanvas") ?? undefined,
+    canvas: document.querySelector('.js-webgl') ?? undefined,
   });
   renderer.setSize(width, height);
   renderer.setPixelRatio(window.devicePixelRatio);
@@ -163,7 +159,7 @@ function main() {
   }
 
   scrollCameraMove();
-  window.addEventListener("scroll", () => {
+  window.addEventListener('scroll', () => {
     scrollCameraMove();
   });
 
@@ -194,7 +190,7 @@ function main() {
     // 形状データを作成
     const geometry = new THREE.BufferGeometry();
     geometry.setAttribute(
-      "position",
+      'position',
       new THREE.Float32BufferAttribute(vertices, 3)
     );
 

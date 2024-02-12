@@ -1,0 +1,31 @@
+.p-portfolio-content {
+    margin: 0 0 100vh;
+}
+
+.p-portfolio-content__ttl {
+    font-size: 6rem;
+    font-weight: 400;
+    width: fit-content;
+    height: fit-content;
+    position: sticky;
+    top: 70vh;
+    left: 5vw;
+    text-align: center;
+}
+
+.p-portfolio-content__desc {
+    margin: 30vh 0 0 30vw;
+    padding: 5vw;
+    height: 300vh;
+    background-color: #303030;
+}
+
+.p-portfolio-content__desc--about {
+    @extend .p-portfolio-content__desc;
+    background-color: #ee806a;
+}
+
+.p-portfolio-content__desc--works {
+    @extend .p-portfolio-content__desc;
+    background-color: #84cfe9;
+}

@@ -1,7 +1,7 @@
 $breakpoints: (
-  "sp": "screen and (max-width: 767px)",
-  "tab": "screen and (min-width: 768px)",
-  "pc": "screen and (min-width: 1025px)",
+    "sp": "screen and (max-width: 767px)",
+    "tab": "screen and (min-width: 768px)",
+    "pc": "screen and (min-width: 1025px)",
 ) !default;
 
 // メディアクエリ指定用mixin
@@ -10,7 +10,7 @@ $breakpoints: (
 //     color: yellow;
 // }
 @mixin mq($sp_tab_pc) {
-  @media #{map-get($breakpoints, $sp_tab_pc)} {
-    @content;
-  }
+    @media #{map-get($breakpoints, $sp_tab_pc)} {
+        @content;
+    }
 }
