@@ -1,3 +1,57 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    // importの並び順設定
+    "import/order": [
+      "warn",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          ["parent", "sibling"],
+          "object",
+          "type",
+          "index"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "next/**",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "API",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "graphql/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "ui-components/**",
+            "group": "index",
+            "position": "after"
+          },
+          {
+            "pattern": "**\\.css",
+            "group": "index",
+            "position": "after"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react", "next/**"],
+        "newlines-between": "never", // グループ毎にで改行を入れる (always/never)
+        "alphabetize": { "order": "asc", "caseInsensitive": false }
+      }
+    ],
+    "import/first": "warn", // importをファイル先頭に記述
+    "import/newline-after-import": "warn" // 最後のimportの後に空行を追加
+  }
 }

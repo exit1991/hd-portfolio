@@ -48,6 +48,79 @@ npm install sass
 npm install ress
 ```
 
+
+## ESLint の設定
+- ESLint 用の設定ファイルは、Next.js 導入時に追加済み (`.eslintrc.json`)
+- VSCode の拡張機能導入と、設定ファイルの内容変更を行う
+
+### 手順
+#### 拡張機能
+- 拡張機能（ID：dbaeumer.vscode-eslint）を導入する
+
+#### 設定変更
+- 「`.eslintrc.json`」を以下の内容に変更する
+
+```json
+{
+  "extends": "next/core-web-vitals",
+  "rules": {
+    // importの並び順設定
+    "import/order": [
+      "warn",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          ["parent", "sibling"],
+          "object",
+          "type",
+          "index"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "next/**",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "API",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "graphql/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "ui-components/**",
+            "group": "index",
+            "position": "after"
+          },
+          {
+            "pattern": "**\\.css",
+            "group": "index",
+            "position": "after"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react", "next/**"],
+        // "newlines-between": "always",
+        "alphabetize": { "order": "asc", "caseInsensitive": false }
+      }
+    ],
+    "import/first": "warn", // importをファイル先頭に記述
+    "import/newline-after-import": "warn" // 最後のimportの後に空行を追加
+  }
+}
+```
+
+
 ## Prettier の導入
 - 自動整形ツール
 - VSCode 側で導入する
@@ -103,13 +176,42 @@ npm install ress
 ### 設定ファイル配置
 #### .prettierrc
 - プロジェクトのトップに `.prettierrc` を作成する
+- 以下を追加する
+
+```json
+{
+  "tabWidth": 4,
+  "semi": true,
+  "singleQuote": false,
+  "overrides": [
+    {
+      "files": ["*.json", ".prettierrc"],
+      "options": {
+        "tabWidth": 2
+      }
+    },
+    {
+      "files": ["*.js", "*.jsx", "*.ts", "*.tsx"],
+      "options": {
+        "tabWidth": 2,
+        "singleQuote": true
+      }
+    }
+  ]
+}
+```
 
 #### .prettierignore
 - プロジェクトのトップに `.prettierignore` を作成する
 - 以下を追加する
 
 ```
-node_modules
+package.json
+package-lock.json
+
+# 現在のディレクトリとそのサブディレクトリに存在する全ての対象を無視
+**/.git
+**/node_modules
 ```
 
 - 他にも除外したいものがあったら追加する
@@ -124,19 +226,7 @@ node_modules
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "[01] Next.js: サーバーサイド起動",
-      "type": "node-terminal",
-      "request": "launch",
-      "command": "npm run dev"
-    },
-    {
-      "name": "[02] Next.js: クライアントサイド起動",
-      "type": "chrome",
-      "request": "launch",
-      "url": "http://localhost:3000"
-    },
-    {
-      "name": "[03] Next.js: サーバー＋クライアント起動",
+      "name": "[01] Next.js: サーバー＋クライアント起動",
       "type": "node-terminal",
       "request": "launch",
       "command": "npm run dev",
@@ -147,6 +237,18 @@ node_modules
         "killOnServerStop": true
       }
     },
+    {
+      "name": "[02] Next.js: サーバーサイドのみ起動",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev"
+    },
+    {
+      "name": "[03] Next.js: クライアントサイドのみ起動",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000"
+    }
   ]
 }
 ```
