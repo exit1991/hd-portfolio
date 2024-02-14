@@ -1,0 +1,21 @@
+@use "../global" as g;
+
+.p-site-image-set {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    margin: 0 0 1rem;
+}
+
+.p-site-image-set__image {
+    width: 200px;
+    height: auto;
+    border: solid 5px #57b9d9;
+    box-shadow: 7px 7px 0px #387b92;
+    transform: none;
+    transition: transform 0.5s;
+    &:hover {
+        transform: scale(1.7);
+    }
+}

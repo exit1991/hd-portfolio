@@ -17,12 +17,17 @@ export default function Home() {
         <nav className="p-main-manu">
           <ul>
             <li className="c-manu-item">
-              <a className="c-manu-item__link" href="/">
+              <a className="c-manu-item__link" href="#">
+                top
+              </a>
+            </li>
+            <li className="c-manu-item">
+              <a className="c-manu-item__link" href="#about">
                 about
               </a>
             </li>
             <li className="c-manu-item">
-              <a className="c-manu-item__link" href="/">
+              <a className="c-manu-item__link" href="#works">
                 works
               </a>
             </li>
@@ -36,13 +41,13 @@ export default function Home() {
             <h1 className="p-hero-logo__txt">hdeg</h1>
           </div>
         </div>
-        <section className="p-portfolio-content">
+        <section id="about" className="p-portfolio-content">
           <h1 className="p-portfolio-content__ttl">about</h1>
           <div className="p-portfolio-content__desc--about">
             <TopAbout />
           </div>
         </section>
-        <section className="p-portfolio-content">
+        <section id="works" className="p-portfolio-content">
           <h1 className="p-portfolio-content__ttl">works</h1>
           <div className="p-portfolio-content__desc--works">
             <TopWorks />
