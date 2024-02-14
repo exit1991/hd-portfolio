@@ -252,3 +252,18 @@ package-lock.json
   ]
 }
 ```
+
+### Font Awesome のインストール
+
+```bash
+# コアパッケージを導入
+npm install @fortawesome/fontawesome-svg-core
+
+# アイコンパッケージの導入
+npm install @fortawesome/free-solid-svg-icons
+npm install @fortawesome/free-regular-svg-icons
+
+# React用コンポーネントの導入
+npm install @fortawesome/react-fontawesome@latest
+```
+

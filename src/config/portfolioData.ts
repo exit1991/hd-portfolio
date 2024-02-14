@@ -1,6 +1,16 @@
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import {
+  faBarsStaggered,
+  faCloud,
+  faCube,
+  faDatabase,
+  faShapes,
+  faUser,
+} from '@fortawesome/free-solid-svg-icons';
+
 type aboutData = {
   title: string;
-  icon: string;
+  icon: IconProp;
   list: string[];
 };
 
@@ -14,8 +24,13 @@ type PortfolioData = {
 export const portfolioData: PortfolioData = {
   about: [
     {
+      title: 'hdeg',
+      icon: faUser,
+      list: ['1991年生まれ'],
+    },
+    {
       title: '言語',
-      icon: 'fa-solid fa-bars-staggered',
+      icon: faBarsStaggered,
       list: [
         'JavaScript',
         'TypeScript',
@@ -33,22 +48,22 @@ export const portfolioData: PortfolioData = {
     },
     {
       title: 'フレームワーク・ライブラリ',
-      icon: 'fa-solid fa-cube',
+      icon: faCube,
       list: ['React', 'Next.js', 'Gatsby JS'],
     },
     {
       title: 'DB',
-      icon: 'fa-solid fa-database',
+      icon: faDatabase,
       list: ['Oracle', 'PostgreSQL', 'Amazon Redshift'],
     },
     {
       title: 'Cloud',
-      icon: 'fa-solid fa-cloud',
+      icon: faCloud,
       list: ['AWS'],
     },
     {
       title: '資格',
-      icon: 'fa-solid fa-shapes',
+      icon: faShapes,
       list: [
         'Java SE Bronze／Silver',
         'HTML5プロフェッショナル認定試験 レベル1／レベル2',

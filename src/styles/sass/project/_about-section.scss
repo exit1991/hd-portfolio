@@ -3,17 +3,27 @@
 .p-about-section {
     font-family: g.$font-notojp;
     margin: 5rem 0;
-    // display: flex;
-    // justify-content: flex-start;
-    // align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.p-about-section__icon {
+    color: rgba(45, 64, 89, 1);
+    margin: 2rem 8rem 2rem 2rem;
+    width: 8rem;
+    height: 8rem;
 }
 
 .p-about-section__ttl {
     font-size: 2.5rem;
     font-weight: 900;
+    margin: 0 0 1rem;
 }
 
 .p-about-section__content {
     font-weight: 300;
+    font-size: 1.2rem;
     list-style-type: none;
+    line-height: 2;
 }
