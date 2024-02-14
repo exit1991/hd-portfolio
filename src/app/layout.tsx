@@ -1,5 +1,5 @@
-import type { Metadata } from 'next';
 import * as GoogleFonts from '../styles/ts/fonts';
+import type { Metadata } from 'next';
 import 'ress';
 import '../styles/sass/style.scss';
 

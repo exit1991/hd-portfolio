@@ -1,10 +1,14 @@
+@use "../global" as g;
+
 .p-portfolio-content {
     margin: 0 0 100vh;
+    font-family: g.$font-notojp;
 }
 
 .p-portfolio-content__ttl {
     font-size: 6rem;
     font-weight: 400;
+    font-family: g.$font-poiret-one;
     width: fit-content;
     height: fit-content;
     position: sticky;
@@ -16,7 +20,6 @@
 .p-portfolio-content__desc {
     margin: 30vh 0 0 30vw;
     padding: 5vw;
-    height: 300vh;
     background-color: #303030;
 }
 
