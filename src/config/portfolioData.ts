@@ -4,7 +4,7 @@ import {
   faCloud,
   faCube,
   faDatabase,
-  faShapes,
+  faTrophy,
   faUser,
 } from '@fortawesome/free-solid-svg-icons';
 
@@ -14,8 +14,17 @@ type aboutData = {
   list: string[];
 };
 
+type worksData = {
+  title: string;
+  image: string;
+  desc: string[];
+  website: string;
+  code: string[];
+};
+
 type PortfolioData = {
   about: aboutData[];
+  works: worksData[];
 };
 
 /**
@@ -49,7 +58,14 @@ export const portfolioData: PortfolioData = {
     {
       title: 'フレームワーク・ライブラリ',
       icon: faCube,
-      list: ['React', 'Next.js', 'Gatsby JS'],
+      list: [
+        'React',
+        'Next.js',
+        'Gatsby JS',
+        'Three.js',
+        'Phaser3',
+        'Spring Boot',
+      ],
     },
     {
       title: 'DB',
@@ -59,11 +75,11 @@ export const portfolioData: PortfolioData = {
     {
       title: 'Cloud',
       icon: faCloud,
-      list: ['AWS'],
+      list: ['AWS', 'GCP'],
     },
     {
       title: '資格',
-      icon: faShapes,
+      icon: faTrophy,
       list: [
         'Java SE Bronze／Silver',
         'HTML5プロフェッショナル認定試験 レベル1／レベル2',
@@ -74,6 +90,81 @@ export const portfolioData: PortfolioData = {
         'VBAエキスパート試験 Excel VBA Basic／Standard',
         'ITパスポート',
         'ねこ検定 初級',
+      ],
+    },
+  ],
+  works: [
+    {
+      title: 'Cafein (カフェイン)',
+      image: '',
+      desc: ['駅カフェ路線図掲載サイト'],
+      website: 'https://take4b-cafein.netlify.app/',
+      code: ['https://github.com/take4bcreators/cafe-train-prj'],
+    },
+    {
+      title: 'TEMPORALLY (テンポラリー)',
+      image: '',
+      desc: ['すごろく拡張ツール (WEBツール)'],
+      website: 'https://extensionlab-temporally.netlify.app/',
+      code: [
+        'https://github.com/take4bcreators/expand-sugoroku-project-front',
+        'https://github.com/take4bcreators/expand-sugoroku-project-batch',
+        'https://github.com/take4bcreators/expand-sugoroku-project-server',
+      ],
+    },
+    {
+      title: 'フリフリフリック',
+      image: '',
+      desc: ['WEBゲーム'],
+      website: 'https://extensionlab-temporally.netlify.app/minigame/furiwake/',
+      code: [
+        'https://github.com/take4bcreators/expand-sugoroku-minigame-furiwake',
+      ],
+    },
+    {
+      title: 'extensionLAB',
+      image: '',
+      desc: ['WEBツール紹介サイト'],
+      website: 'https://extensionlab.netlify.app/',
+      code: [],
+    },
+    {
+      title: 'シンケイスイジャックポッド',
+      image: '',
+      desc: ['トランプ拡張ツール'],
+      website: 'https://extensionlab.netlify.app/app/app01/',
+      code: [],
+    },
+    {
+      title: '大富豪スイッチ',
+      image: '',
+      desc: ['トランプ拡張ツール'],
+      website: 'https://extensionlab.netlify.app/app/app02/',
+      code: [],
+    },
+    {
+      title: 'STURTER',
+      image: '',
+      desc: ['自作iPhoneアプリ紹介サイト'],
+      website: 'https://exit1991.github.io/sturter/',
+      code: ['https://github.com/exit1991/sturter'],
+    },
+    {
+      title: 'POINTS',
+      image: '',
+      desc: ['WEBツール'],
+      website: 'https://dexit-output-points.netlify.app/',
+      code: ['https://github.com/exit1991/simple-web-score'],
+    },
+    {
+      title: 'WOLFFICE',
+      image: '',
+      desc: ['人狼パーティツール'],
+      website: '',
+      code: [
+        'https://github.com/take4bcreators/jinro-party-frontend',
+        'https://github.com/take4bcreators/jinro-party-backend',
+        'https://github.com/take4bcreators/jinro-party-server',
       ],
     },
   ],

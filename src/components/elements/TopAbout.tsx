@@ -1,5 +1,5 @@
 'use client';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { faSquareCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { portfolioData } from '@/config/portfolioData';
 
@@ -21,7 +21,10 @@ export default function Home() {
                 {data.list.map((contents, contentsIndex) => {
                   return (
                     <li key={contentsIndex}>
-                      <FontAwesomeIcon icon={faCheck} className="c-list-icon" />
+                      <FontAwesomeIcon
+                        icon={faSquareCheck}
+                        className="c-list-icon"
+                      />
                       {contents}
                     </li>
                   );
