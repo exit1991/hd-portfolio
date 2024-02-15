@@ -19,19 +19,30 @@ export default function Home() {
       <canvas className="js-webgl p-bg-canvas"></canvas>
       <main className="l-main">
         <nav className="p-main-manu">
+          <div className="p-main-manu__logo">
+            <a href="./">
+              <PageLogo />
+            </a>
+          </div>
           <ul>
             <li className="c-manu-item">
-              <a className="c-manu-item__link" href="#">
+              <a className="c-manu-item__link c-manu-item__link--top" href="#">
                 top
               </a>
             </li>
             <li className="c-manu-item">
-              <a className="c-manu-item__link" href="#about">
+              <a
+                className="c-manu-item__link c-manu-item__link--about"
+                href="#about"
+              >
                 about
               </a>
             </li>
             <li className="c-manu-item">
-              <a className="c-manu-item__link" href="#works">
+              <a
+                className="c-manu-item__link c-manu-item__link--works"
+                href="#works"
+              >
                 works
               </a>
             </li>
@@ -39,9 +50,6 @@ export default function Home() {
         </nav>
         <div className="p-hero">
           <div className="p-hero-logo">
-            <div className="p-hero-logo__icon">
-              <PageLogo />
-            </div>
             <h1 className="p-hero-logo__txt">hdeg</h1>
           </div>
         </div>

@@ -78,14 +78,12 @@ export class TopThreeProcessing {
     createParticles(0x84cfe9);
     tick();
 
-    //パーティクルの作成
+    // パーティクルの作成
     function createParticles(materialColor: THREE.ColorRepresentation) {
       // 頂点情報を格納する配列
       const vertices = [];
 
       // 配置する個数
-      // const LENGTH = 1000;
-      // const LENGTH = 800;
       const LENGTH = 300;
       const range = 500;
       for (let i = 0; i < LENGTH; i++) {
@@ -106,9 +104,6 @@ export class TopThreeProcessing {
 
       // マテリアルを作成
       const material = new THREE.PointsMaterial({
-        // size: 3, // 一つ一つのサイズ
-        // size: 4.5, // 一つ一つのサイズ
-        // size: 10, // 一つ一つのサイズ
         size: 8, // 一つ一つのサイズ
         color: materialColor, // 色
       });
@@ -119,7 +114,6 @@ export class TopThreeProcessing {
 
     // 毎フレーム時に実行されるループイベント
     function tick() {
-      // cloud.rotation.y += 0.0001;
       renderer.render(scene, camera); // レンダリング
       requestAnimationFrame(tick);
     }

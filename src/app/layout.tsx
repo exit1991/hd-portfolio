@@ -4,7 +4,7 @@ import 'ress';
 import '../styles/sass/style.scss';
 
 export const metadata: Metadata = {
-  title: 'hdeg works',
+  title: 'hdeg | Portfolio',
   description: 'hdeg の制作物紹介サイト',
 };
 

@@ -4,7 +4,7 @@
     font-size: 3rem;
     height: auto;
     list-style: none;
-    margin: 1rem 0 0 2rem;
+    margin: 1rem 0 0 4rem;
     transition: font-size 0.5s;
 }
 
@@ -24,6 +24,18 @@
     background: rgba(238, 128, 106, 1);
     transition: all 0.5s;
     opacity: 1;
+}
+
+.c-manu-item__link--top::before {
+    background: #ffe153;
+}
+
+.c-manu-item__link--about::before {
+    background: #ee806a;
+}
+
+.c-manu-item__link--works::before {
+    background: #84cfe9;
 }
 
 .c-manu-item__link:hover::before {
