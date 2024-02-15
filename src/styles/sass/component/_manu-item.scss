@@ -2,41 +2,34 @@
 
 .c-manu-item {
     font-size: 3rem;
-    width: 100%;
     height: auto;
-    padding: 0.7em;
+    list-style: none;
+    margin: 1rem 0 0 2rem;
+    transition: font-size 0.5s;
 }
 
 // ホバーアニメーション
-
 .c-manu-item__link {
-    /*背景色の基点とするためrelativeを指定*/
     position: relative;
 }
 
-.c-manu-item__link::after {
+.c-manu-item__link::before {
     content: "";
-    /*絶対配置で線の位置を決める*/
     position: absolute;
     z-index: g.$zindex-manu-item__link;
     bottom: 0;
-    left: -50%;
-
-    /*背景の形状*/
+    left: -5rem;
     width: 0;
     height: 100%;
     background: rgba(238, 128, 106, 1);
-    /*アニメーションの指定*/
     transition: all 0.5s;
-    opacity: 0; /*はじめは透過0*/
+    opacity: 1;
 }
 
-/*現在地とhoverの設定*/
-.c-manu-item__link:hover::after {
-    /*背景の形状*/
-    width: 100%; /*横幅を伸ばす*/
+.c-manu-item__link:hover::before {
+    width: 18rem;
     padding: 0.5em 2.2em;
-    opacity: 1; /*不透明に*/
+    opacity: 1;
     border-radius: 0 30px 30px 0;
 }
 

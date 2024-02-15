@@ -1,34 +1,23 @@
 export default function Home() {
   return (
     <svg
-      width={131}
-      height={130}
-      viewBox="0 0 131 130"
+      width={501}
+      height={501}
+      viewBox="0 0 501 501"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="p-svg-page-logo"
     >
-      <circle cx="65.1844" cy={65} r={65} fill="#EDEDED" />
-      <rect
-        x="34.7156"
-        y="58.9062"
-        width="48.75"
-        height="48.75"
+      <circle cx={250.124} cy={250.445} r={250} fill="#EDEDED" />
+      <path
         fill="#84CFE9"
+        d="M137.96 237.36H325.46000000000004V424.86H137.96z"
       />
-      <rect
-        x="59.0906"
-        y="34.5312"
-        width="48.75"
-        height="48.75"
+      <path
         fill="#FFE153"
+        d="M231.71 143.61H419.21000000000004V331.11H231.71z"
       />
-      <rect
-        x="22.5281"
-        y="22.3438"
-        width="48.75"
-        height="48.75"
-        fill="#EE806A"
-      />
+      <path fill="#EE806A" d="M91.0847 96.7354H278.5847V284.2354H91.0847z" />
     </svg>
   );
 }

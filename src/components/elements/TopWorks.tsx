@@ -1,5 +1,4 @@
 'use client';
-
 import Image from 'next/image';
 import {
   faCodeBranch,
@@ -7,6 +6,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { portfolioData } from '@/config/portfolioData';
+
+const SITE_IMAGE_DIR: string = '/images/siteimage/';
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
           <section key={index} className="p-works-section">
             <div className="p-site-image-set">
               {data.image.map((image, imageIndex) => {
-                const imagePath = '/images/' + image;
+                const imagePath = SITE_IMAGE_DIR + image;
                 return (
                   <Image
                     src={imagePath}

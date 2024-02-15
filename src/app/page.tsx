@@ -1,9 +1,12 @@
 'use client';
 import { useEffect } from 'react';
+import SplashScreen from '@/components/elements/SplashScreen';
 import TopAbout from '@/components/elements/TopAbout';
 import TopWorks from '@/components/elements/TopWorks';
 import PageLogo from '@/components/svg/PageLogo';
 import { TopThreeProcessing } from '@/utils/topThreeProcessing';
+
+const LOADING_TIME: number = 2200;
 
 export default function Home() {
   useEffect(() => {
@@ -12,6 +15,7 @@ export default function Home() {
 
   return (
     <>
+      <SplashScreen visibleTime={LOADING_TIME} />
       <canvas className="js-webgl p-bg-canvas"></canvas>
       <main className="l-main">
         <nav className="p-main-manu">
