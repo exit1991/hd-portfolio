@@ -1,0 +1,20 @@
+// フェードアウト実装用 mixin
+// フェードアウト実行前のスタイルに fadeout-before を適用、
+// フェードアウト実行後のスタイルに fadeout-after を適用する
+
+// フェードアウト実行前適用
+@mixin fadeout-before($time: 0.5s) {
+    opacity: 1;
+    transition: opacity $time;
+}
+
+// フェードアウト実行後適用
+@mixin fadeout-after($to-diable-time: 0.5s) {
+    @keyframes to-hide {
+        to {
+            display: none;
+        }
+    }
+    opacity: 0;
+    animation: to-hide 0s 1 $to-diable-time forwards;
+}

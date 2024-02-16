@@ -19,8 +19,8 @@
 
 body {
     font-family: var(--font-poiret-one), var(--font-notojp), sans-serif;
-    background-color: rgba(45, 64, 89, 1);
-    color: white;
+    background-color: g.$color-site-page-bg;
+    color: g.$color-site-text-light;
     margin: 0;
 }
 

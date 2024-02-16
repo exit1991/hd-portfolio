@@ -20,15 +20,15 @@
 .p-portfolio-content__desc {
     margin: 30vh 0 0 30vw;
     padding: 5vw;
-    background-color: #303030;
+    background-color: g.$color-square-red;
 }
 
 .p-portfolio-content__desc--about {
     @extend .p-portfolio-content__desc;
-    background-color: #ee806a;
+    background-color: g.$color-square-red;
 }
 
 .p-portfolio-content__desc--works {
     @extend .p-portfolio-content__desc;
-    background-color: #84cfe9;
+    background-color: g.$color-square-blue;
 }

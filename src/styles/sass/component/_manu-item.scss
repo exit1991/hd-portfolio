@@ -11,6 +11,8 @@
 // ホバーアニメーション
 .c-manu-item__link {
     position: relative;
+    color: g.$color-manu-text;
+    transition: color 0.5s;
 }
 
 .c-manu-item__link::before {
@@ -21,21 +23,21 @@
     left: -5rem;
     width: 0;
     height: 100%;
-    background: rgba(238, 128, 106, 1);
+    background-color: g.$color-square-red;
     transition: all 0.5s;
     opacity: 1;
 }
 
 .c-manu-item__link--top::before {
-    background: #ffe153;
+    background-color: g.$color-square-yellow;
 }
 
 .c-manu-item__link--about::before {
-    background: #ee806a;
+    background-color: g.$color-square-red;
 }
 
 .c-manu-item__link--works::before {
-    background: #84cfe9;
+    background-color: g.$color-square-blue;
 }
 
 .c-manu-item__link:hover::before {
@@ -46,5 +48,5 @@
 }
 
 .c-manu-item__link:hover {
-    color: #fff;
+    color: g.$color-manu-text-hover;
 }
