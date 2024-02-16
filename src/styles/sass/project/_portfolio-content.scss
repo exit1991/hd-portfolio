@@ -15,12 +15,24 @@
     top: 70vh;
     left: 5vw;
     text-align: center;
+
+    @include g.mq(sp) {
+        top: 80vh;
+        top: 80svh;
+        // top: 0vh;
+        // top: 10svh;
+        font-size: 20vw;
+    }
 }
 
 .p-portfolio-content__desc {
     margin: 30vh 0 0 30vw;
     padding: 5vw;
     background-color: g.$color-square-red;
+    @include g.mq(sp) {
+        margin: 30vh 4vw 0;
+        padding: 2vw;
+    }
 }
 
 .p-portfolio-content__desc--about {

@@ -6,6 +6,13 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    @include g.mq(sp) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // align-items: flex-start;
+        flex-direction: column;
+    }
 }
 
 .p-about-section__icon {
@@ -13,12 +20,20 @@
     margin: 2rem 8rem 2rem 2rem;
     width: 6rem;
     height: 6rem;
+    @include g.mq(sp) {
+        width: 3.5rem;
+        height: 3.5rem;
+        margin: 0;
+    }
 }
 
 .p-about-section__ttl {
     font-size: 2.5rem;
     font-weight: 900;
     margin: 0 0 1rem;
+    @include g.mq(sp) {
+        font-size: 1.4rem;
+    }
 }
 
 .p-about-section__content {
@@ -26,4 +41,8 @@
     font-size: 1.2rem;
     list-style-type: none;
     line-height: 2;
+    @include g.mq(sp) {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
 }
