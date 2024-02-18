@@ -15,15 +15,15 @@ export default function Home() {
                 className="p-about-section__icon"
               />
             </div>
-            <div>
+            <div className="p-about-section__txt-container">
               <h2 className="p-about-section__ttl">{data.title}</h2>
               <ul className="p-about-section__content">
                 {data.list.map((contents, contentsIndex) => {
                   return (
-                    <li key={contentsIndex}>
+                    <li key={contentsIndex} className="p-about-section__list">
                       <FontAwesomeIcon
                         icon={faSquareCheck}
-                        className="c-list-icon"
+                        className="p-about-section__list-icon"
                       />
                       {contents}
                     </li>

@@ -6,6 +6,9 @@
     align-items: center;
     gap: 20px;
     margin: 0 0 1rem;
+    @include g.mq(sp) {
+        gap: 5px;
+    }
 }
 
 .p-site-image-set__image {
@@ -15,10 +18,15 @@
     box-shadow: 7px 7px 0px #387b92;
     transform: none;
     transition: transform 0.5s;
-    &:hover {
-        transform: scale(1.7);
-    }
     @include g.mq(sp) {
         width: 20vw;
+        border: solid 3px #57b9d9;
+        box-shadow: 3px 3px 0px #387b92;
+    }
+    &:hover {
+        transform: scale(1.7);
+        @include g.mq(sp) {
+            transform: unset;
+        }
     }
 }
