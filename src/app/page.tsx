@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import SplashScreen from '@/components/elements/SplashScreen';
 import TopAbout from '@/components/elements/TopAbout';
 import TopWorks from '@/components/elements/TopWorks';
+import Footer from '@/components/layouts/Footer';
 import PageLogo from '@/components/svg/PageLogo';
 import { TopThreeProcessing } from '@/utils/topThreeProcessing';
 
@@ -66,6 +67,7 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 }

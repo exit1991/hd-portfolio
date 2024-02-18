@@ -45,7 +45,13 @@ export default function Home() {
                         icon={faWindowMaximize}
                         className="c-list-icon"
                       />
-                      <a href={website}>{website}</a>
+                      <a
+                        href={website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {website}
+                      </a>
                     </li>
                   );
                 })}
@@ -56,7 +62,9 @@ export default function Home() {
                         icon={faCodeBranch}
                         className="c-list-icon"
                       />
-                      <a href={code}>{code}</a>
+                      <a href={code} target="_blank" rel="noopener noreferrer">
+                        {code}
+                      </a>
                     </li>
                   );
                 })}
