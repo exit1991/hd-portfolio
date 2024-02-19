@@ -40,10 +40,10 @@ export default function Home() {
               <ul className="p-works-section__content">
                 {data.website.map((website, websiteIndex) => {
                   return (
-                    <li key={websiteIndex}>
+                    <li key={websiteIndex} className="p-works-section__list">
                       <FontAwesomeIcon
                         icon={faWindowMaximize}
-                        className="c-list-icon"
+                        className="p-works-section__list-icon"
                       />
                       <a
                         href={website}
@@ -57,10 +57,10 @@ export default function Home() {
                 })}
                 {data.code.map((code, codeIndex) => {
                   return (
-                    <li key={codeIndex}>
+                    <li key={codeIndex} className="p-works-section__list">
                       <FontAwesomeIcon
                         icon={faCodeBranch}
-                        className="c-list-icon"
+                        className="p-works-section__list-icon"
                       />
                       <a href={code} target="_blank" rel="noopener noreferrer">
                         {code}
