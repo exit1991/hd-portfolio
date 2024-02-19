@@ -1,5 +1,7 @@
 @use "../global" as g;
 
+$_fadeout-time: 0.5s;
+
 .p-splash-screen {
     width: 100vw;
     height: 100vh;
@@ -13,8 +15,12 @@
     justify-content: center;
     align-items: center;
     z-index: g.$zindex-splash;
-    @include g.fadeout-before(0.5s);
+    opacity: 1;
+    transition: opacity $_fadeout-time;
     &.is-hide {
-        @include g.fadeout-after(0.5s);
+        opacity: 0;
+    }
+    &.is-display-none {
+        display: none;
     }
 }
