@@ -4,6 +4,7 @@ import {
   faCloud,
   faCube,
   faDatabase,
+  faToolbox,
   faTrophy,
   faUser,
 } from '@fortawesome/free-solid-svg-icons';
@@ -50,7 +51,7 @@ export const portfolioData: PortfolioData = {
         'Bash',
         'HTML',
         'CSS',
-        'SASS／SCSS',
+        'Sass／Scss',
         'SQL',
         'PL/pgSQL',
       ],
@@ -70,7 +71,7 @@ export const portfolioData: PortfolioData = {
     {
       title: 'DB',
       icon: faDatabase,
-      list: ['Oracle', 'PostgreSQL', 'Amazon Redshift'],
+      list: ['Oracle Database', 'PostgreSQL', 'Amazon Redshift', 'MySQL'],
     },
     {
       title: 'Cloud',
@@ -78,16 +79,24 @@ export const portfolioData: PortfolioData = {
       list: ['AWS', 'GCP'],
     },
     {
+      title: 'Tool',
+      icon: faToolbox,
+      list: ['VS Code', 'Git／GitHub', 'Figma', 'Vagrant', 'Docker'],
+    },
+    {
       title: '資格',
       icon: faTrophy,
       list: [
-        'Java SE Bronze/Silver',
-        'HTML 5 プロフェッショナル 認定試験 レベル1/レベル2',
+        'Java SE Bronze',
+        'Java SE Silver',
+        'HTML 5 プロフェッショナル 認定試験 レベル1',
+        'HTML 5 プロフェッショナル 認定試験 レベル2',
         'Python 3 エンジニア認定基礎試験',
         'AWS Certified Cloud Practitioner',
         'ORACLE MASTER Bronze Oracle Database 12c',
         'LPIC-1',
-        'VBA エキスパート試験 Excel VBA Basic/Standard',
+        'VBA エキスパート試験 Excel VBA Basic',
+        'VBA エキスパート試験 Excel VBA Standard',
         'ITパスポート',
         'ねこ検定 初級',
       ],
