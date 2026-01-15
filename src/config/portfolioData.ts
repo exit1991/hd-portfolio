@@ -89,6 +89,7 @@ export const portfolioData: PortfolioData = {
       list: [
         'Java SE Bronze',
         'Java SE Silver',
+        'Java SE Gold',
         'HTML 5 プロフェッショナル 認定試験 レベル1',
         'HTML 5 プロフェッショナル 認定試験 レベル2',
         'Python 3 エンジニア認定基礎試験',
